@@ -11,7 +11,7 @@ class Transfer
   end
 
 def valid?
-  @status == 'pending' && @sender.valid? && @sender.balance > @amount 
+  @status == 'pending' && @sender.valid? && receiver.valid? && @sender.balance > @amount 
 end
 
 
