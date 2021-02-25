@@ -10,7 +10,9 @@ class Transfer
     @status = 'pending'
   end
 
-
+def valid?
+  @satus == 'pending' && @sender.valid? && @sender.balnce > @amount 
+end
 
 
 
